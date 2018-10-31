@@ -1,8 +1,8 @@
 #  QYModel使用说明
 
 ### QYModelDefine
-* _index_t_key : 宏定义，用作CCDataAnalysis中解析数组传入index用，如：_index_t_key(1)，转化为@"[1]"
-* _is_class : 宏定义，用作CCDataAnalysis中解析数据判断是否为某个类，如：_is_class(@"UILabel")，表示判断是否为UILabel对象
+* _index_t_key : 宏定义，用作QYDataAnalysis中解析数组传入index用，如：_index_t_key(1)，转化为@"[1]"
+* _is_class : 宏定义，用作QYDataAnalysis中解析数据判断是否为某个类，如：_is_class(@"UILabel")，表示判断是否为UILabel对象
 
 ### QYDataAnalysis
 
@@ -82,11 +82,11 @@ __attribute__((overloadable)) NSDictionary* CheckDictionary(NSDictionary *dict, 
 __attribute__((overloadable)) NSDictionary* CheckDictionary(NSDictionary *dict, BOOL isCount);
 ```
 
-### NSObject+CCModelCheckType
-辅助CCDataAnalysis类入参：isFunc
+### NSObject+QYModelCheckType
+辅助QYDataAnalysis类入参：isFunc
 
 ### QYModel
-数据模型解析基类，使用方法：创建一个继承自CCModel的模型类，添加与json中key名字相同的属性，使用`- (instancetype)initWithDictionary:(NSDictionary *)dictionary`方法创建对象即可
+数据模型解析基类，使用方法：创建一个继承自QYModel的模型类，添加与json中key名字相同的属性，使用`- (instancetype)initWithDictionary:(NSDictionary *)dictionary`方法创建对象即可
 
 * 当属姓名与json中key不一样时，可以在模型类中重写：
 
@@ -94,7 +94,7 @@ __attribute__((overloadable)) NSDictionary* CheckDictionary(NSDictionary *dict, 
 /**
  重新确定映射关系，健值对书写为 json中key : model中属性名，其中json中key支持多级取值如：@"info.name[0][1]"
 */
-- (NSDictionary *)CCKeyMapper;
+- (NSDictionary *)QYKeyMapper;
 ```
 
 * 当模型数据在不同的json中时，可以使用`- (instancetype)initWithDictionarys:(NSDictionary *)dictionary, ... NS_REQUIRES_NIL_TERMINATION`传入多个json
@@ -112,7 +112,7 @@ __attribute__((overloadable)) NSDictionary* CheckDictionary(NSDictionary *dict, 
 // 多个json解析
 - (instancetype)initWithDictionarys:(NSDictionary *)dictionary, ... {
     NSMutableDictionary *multiDictionary = [NSMutableDictionary dictionary];
-    CCModelCombinationDict(multiDictionary);
+    QYModelCombinationDict(multiDictionary);
     if (self = [super initWithDictionary:multiDictionary]) {
         // do after custom analysis
     }
