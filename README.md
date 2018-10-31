@@ -1,10 +1,10 @@
-#  CCModel使用说明
+#  QYModel使用说明
 
-### CCModelDefine
+### QYModelDefine
 * _index_t_key : 宏定义，用作CCDataAnalysis中解析数组传入index用，如：_index_t_key(1)，转化为@"[1]"
 * _is_class : 宏定义，用作CCDataAnalysis中解析数据判断是否为某个类，如：_is_class(@"UILabel")，表示判断是否为UILabel对象
 
-### CCDataAnalysis
+### QYDataAnalysis
 
 1、从字典中取值
 
@@ -85,7 +85,7 @@ __attribute__((overloadable)) NSDictionary* CheckDictionary(NSDictionary *dict, 
 ### NSObject+CCModelCheckType
 辅助CCDataAnalysis类入参：isFunc
 
-### CCModel
+### QYModel
 数据模型解析基类，使用方法：创建一个继承自CCModel的模型类，添加与json中key名字相同的属性，使用`- (instancetype)initWithDictionary:(NSDictionary *)dictionary`方法创建对象即可
 
 * 当属姓名与json中key不一样时，可以在模型类中重写：
