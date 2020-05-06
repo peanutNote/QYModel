@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
   s.name             = "QYModel"  
-  s.version          = "1.0.0"  
+  s.version          = "1.0.1"  
   s.summary          = "Magical Data Modelling Framework for JSON. Create rapidly powerful, atomic and smart data model classes."  
  
   s.homepage         = "https://github.com/peanutNote"   

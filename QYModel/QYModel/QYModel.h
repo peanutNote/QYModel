@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "QYAnalysis.h"
 
-#define _index_t_key(index) [NSString stringWithFormat:@"[%d]", index]
-#define _is_class(cls)  [NSString stringWithFormat:@"_is_class:%@", NSStringFromClass(cls)]
-
 #pragma mark - Property Protocols
 /**
  * 模型解析时会忽略该属性

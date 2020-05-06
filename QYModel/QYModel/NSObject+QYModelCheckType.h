@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#define _index_t_key(index) [NSString stringWithFormat:@"[%d]", index]
+#define _is_class(cls)  [NSString stringWithFormat:@"_is_class:%@", NSStringFromClass(cls)]
+
 extern NSString *const _is_string;
 extern NSString *const _is_number;
 extern NSString *const _is_array;
