@@ -1,6 +1,6 @@
 //
 //  NSObject+QYModelCheckType.h
-//  CMM
+//  QYModel
 //
 //  Created by qianye on 2017/12/6.
 //  Copyright © 2017年 chemanman. All rights reserved.

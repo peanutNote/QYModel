@@ -41,7 +41,7 @@
 + (NSDictionary *)keyMapper;
 
 /**
- CCModel唯一创建方法
+ QYModel唯一创建方法
  
  @param dictionary json数据
  */
@@ -50,7 +50,7 @@
 @end
 
 
-/// CCModel 扩展
+/// QYModel 扩展
 @interface QYModel (QYModelExtensionMethods)
 
 #define QYModelCombinationDict(completeDict) {va_list firstList; va_start(firstList, dictionary); \
@@ -63,7 +63,7 @@
 - (NSDictionary *)toDictionary;
 
 /**
- CCModel创建扩展方法
+ QYModel创建扩展方法
  
  @param dictionary 支持传多个json
  */
